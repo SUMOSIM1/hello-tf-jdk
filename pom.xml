@@ -5,6 +5,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mainClass>HelloTensorFlow</exec.mainClass>
         <!-- Minimal version for compiling TensorFlow Java is JDK 8 -->
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -15,8 +16,14 @@
         <!-- Include TensorFlow (pure CPU only) for all supported platforms -->
         <dependency>
             <groupId>org.tensorflow</groupId>
-            <artifactId>tensorflow-core-platform</artifactId>
-            <version>0.5.0</version>
+            <artifactId>tensorflow-core-api</artifactId>
+            <version>1.0.0-rc.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>tensorflow-core-native</artifactId>
+            <version>1.0.0-rc.2</version>
+            <classifier>linux-x86_64</classifier>
         </dependency>
     </dependencies>
 
